@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<figure class="text-center mt-3">
+  <blockquote class="blockquote">
+    <p>BBC Secrets</p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    British Born Chinese Life Secrets
+  </figcaption>
+</figure>
+
+
+  <div class="container mt-3">
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+<!--        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+          Episode #1 - Go Back to...
+        </button>
+      </h2>
+<!--      collapse by default  -->
+<!--      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">-->
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Go Back to China?</strong>
+          <br>
+          I have a life tip to respond and maintain <code>peace of mind.</code>
+        </div>
+
+        <!--    Sound item    -->
+        <div class="sound-item">
+          <!--    btn and icon    -->
+          <button type="button" class="btn btn-outline-secondary play-button" data-sound="sound1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-play" viewBox="0 0 16 16">
+            <!-- Note: Add an ID to the path element for easier manipulation -->
+          <path id="playIcon" d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+          </svg>
+          </button>
+          <div class="mb-3 mt-3">Play Ep1</div>
+          <!--    Bootstrap Progress bar    -->
+          <div class="progress" style="display: none;">
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <audio id="sound1" src="{{ url_for('static', filename='files/ep1.mp3') }}"></audio>
+
+        </div>
+
+<!-- end play sound-->
+
+      </div>
+    </div>
+
+<!--    EP2    -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Episode #2 - Banana...
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Being Called "Banana"?</strong>
+          <br>
+          I am unable to speak Mandarin Chinese properly and feel like being seen <code>as fruit(?)</code>
+        </div>
+
+
+
+<!--    Sound item    -->
+        <div class="sound-item">
+          <!--    btn and icon    -->
+          <button type="button" class="btn btn-outline-secondary play-button" data-sound="sound2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-play" viewBox="0 0 16 16">
+            <!-- Note: Add an ID to the path element for easier manipulation -->
+          <path id="playIcon" d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+
+          </svg>
+          </button>
+
+          <div class="mb-3 mt-3">Play Ep2</div>
+          <!--    Bootstrap Progress bar    -->
+          <div class="progress" style="display: none;">
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <audio id="sound2" src="{{ url_for('static', filename='files/ep2.mp3') }}"></audio>
+
+        </div>
+
+
+<!--end play sound-->
+
+
+
+
+      </div>
+    </div>
+
+<!--   EP3  -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Episode #3 - Food...
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>What Is That Weird Food?</strong>
+          <br>
+          OMG stinky tofu is soooo soooo  <code>GOOOOOOOOOD.</code>
+        </div>
+
+
+
+
+
+<!--    Sound item    -->
+        <div class="sound-item">
+          <!--    btn and icon    -->
+          <button type="button" class="btn btn-outline-secondary play-button" data-sound="sound3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-play" viewBox="0 0 16 16">
+            <!-- Note: Add an ID to the path element for easier manipulation -->
+          <path id="playIcon" d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+
+          </svg>
+          </button>
+
+          <div class="mb-3 mt-3">Play Ep3</div>
+
+          <!--    Bootstrap Progress bar    -->
+          <div class="progress" style="display: none;">
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <audio id="sound3" src="{{ url_for('static', filename='files/ep3.mp3') }}"></audio>
+
+        </div>
+
+<!-- end play sound-->
+
+
+      </div>
+    </div>
+
+<!--EP 4-->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Episode #4 - Are you...
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Are you Chinese or British?</strong> <br>
+          Hmmm a tricky question. Let me consider the answer you might be <code>looking for.</code>
+        </div>
+
+
+
+<!--    Sound item    -->
+        <div class="sound-item">
+          <!--    btn and icon    -->
+          <button type="button" class="btn btn-outline-secondary play-button" data-sound="sound4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-play" viewBox="0 0 16 16">
+            <!-- Note: Add an ID to the path element for easier manipulation -->
+          <path id="playIcon" d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+
+          </svg>
+          </button>
+          <div class="mb-3 mt-3">Play Ep4</div>
+          <!--    Bootstrap Progress bar    -->
+          <div class="progress" style="display: none;">
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+
+          <audio id="sound4" src="{{ url_for('static', filename='files/ep4.mp3') }}"></audio>
+
+        </div>
+
+
+
+
+
+
+      </div>
+<!--      accordion item-->
+
+    </div>
+<!--      accordion-->
+
+
+  </div>
+
+
+
+  </div>
+
+
+
+
+  <!-- Hide the Login/Registration buttons for logged-in users -->
+
+  {% if not logged_in: %}
+    <figure class="text-center mt-3 mb-3">
+      <blockquote class="blockquote">
+        <p>Want Transcript?</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Register and login to get a transcript.
+      </figcaption>
+    </figure>
+
+
+
+    <a href="{{ url_for('login') }}" class="btn btn-secondary btn-block btn-large">Login</a>
+    <a href="{{ url_for('register') }}" class="btn btn-warning btn-block btn-large">Register</a>
+
+  <!-- Feedback for logged-in users -->
+  {% else %}
+
+  <div class="mb-3 mt-3">
+    <p>Logged in successfully. Let's tune in.</p>
+    <a href="{{ url_for('download') }}" target="_blank">Download the Transcript of All Episodes</a>
+  </div>
+  {% endif %}
+
+{% endblock %}
