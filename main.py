@@ -3,13 +3,29 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 
-
+import os
+## install python dotenv - to read env variable
+# from dotenv import load_dotenv
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret-key-goes-here'
+
+## Load environment variables from .env file -- local use
+# load_dotenv()
+
+
+## ----- os for deployment
+app.config['COLOR'] = os.environ.get('COLOR')
+print(app.config['COLOR'])
+
+## --- for local env
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 # CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+## -- local development without env variables
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///users.db")
+
+
 db = SQLAlchemy()
 db.init_app(app)
 
@@ -114,4 +130,4 @@ def download():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
